@@ -1,22 +1,10 @@
 # P7_Creez_un_reseau_social_d’entreprise
 
-![logo](./client/public/icon-left-font-monochrome-black.svg)
 
-
-Vous pouvez retrouver le [brief complet ici](https://course.oc-static.com/projects/DWJ_FR_P7/Cahier+charges+Groupomania.pdf)
 
 ## Réalisation
 
 Le projet consiste à construire un réseau social interne pour les employés de Groupomania. Le but de cet outil est de faciliter les interactions entre collègues. Le département RH de Groupomania a imaginé plusieurs fonctionnalités pour favoriser les échanges entre collègues.
-
-![screenshot du site](./client/public/Capture_d’écran_2022-08-02_104343.jpg)
-
-# Objectifs
-
-1. Développer la partie backend
-2. Dévellopper la partie Frontend
-
-
 ## INSTALLATION ##
 
 Créer un dossier vide. Il contiendra le code complet du projet, regroupé dans deux dossiers : un dossier `api` et un dossier `client`.
@@ -74,8 +62,6 @@ Rendez-vous sur [`http://localhost:4200/`](http://localhost:4200/). L'applicatio
 <br>
 ## Technologies
 
-[![My Skills](https://skills.thijs.gg/icons?i=react,js,ts,nodejs,mongodb,express,html,sass,css,git,github)](https://skills.thijs.gg)
-<br><br><br><br>
 ## Annexe. Création d'une base de données noSQL MongoDB
 
 Rendez-vous sur le site de [MongoDb](https://account.mongodb.com/) et créez un compte.
