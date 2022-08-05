@@ -1,0 +1,305 @@
+
+
+.postContainer {
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: $Secondaire-color;
+    color: $Tertiaire-color;
+    font-size: 17px;
+    width: 70%;
+    margin: 10px auto;
+    position: relative;
+    @media (max-width: 768px) {
+        width: 95%;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid $Primaire-color;
+    }
+
+    .img-name-time {
+        display: flex;
+        align-items: center;
+    }
+
+    .postContainer__header__name {
+        margin-left: 10px;
+        text-align: start;
+    }
+
+
+
+    .update-delete {
+        display: flex;
+
+        i.fa.fa-edit {
+            margin-right: 30px;
+            color: $Tertiaire-color;
+
+            &:hover {
+                color: $Primaire-color;
+            }
+        }
+
+        i.fa.fa-trash {
+            color: $Tertiaire-color;
+            &:hover {
+                color: $Primaire-color;
+            }
+        }
+    }
+
+    .textarea {
+        height: 70px;
+        border-radius: 5px;
+        border: 1px solid $Secondaire-color;
+        padding: 10px;
+        margin-top: 10px;
+        color: $Tertiaire-color;
+        font-size: 17px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    
+
+    .comment-card {
+        width: 100%;
+        background-color: $Secondaire-color;
+        display: none;
+        border-top: 2px solid $Tertiaire-color;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .each-user-comment {
+        border: 3px solid $Tertiaire-color;
+        border-radius: 30px 20px 0px 30px;
+        margin-top: 30px;
+    }
+
+    .is-author {
+        background-color: $Secondaire-color;
+        color: $Tertiaire-color ;
+
+        i.fa.fa-trash {
+            color: $Tertiaire-color;
+        }
+
+        span.author {
+            color: $Tertiaire-color;
+            font-style: italic;
+        }
+    }
+
+    #textareaComment {
+        height: 67px;
+        width: 95%;
+        font-size: 14px;
+        border-radius: 15px 15px 0 15px;
+        
+    }
+
+    
+
+
+    .avatar-name-time {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $Tertiaire-color; 
+        background-color: $Secondaire-color ;
+        border-color: $Tertiaire-color;
+        border-radius: 30px;
+        
+        span {
+            margin-right: 14px;
+            color: $Tertiaire-color;
+            font-style: italic;
+        }
+    }
+
+
+    .avatar-name {
+        display: flex;
+        align-items: center;
+
+        h4 {
+            margin-left: 10px;
+        }
+    }
+
+    .comment-text {
+        font-size: 15px;
+        padding: 7px 7px 7px 31px;
+        text-align: start;
+        display: flex;
+        justify-content: space-between;
+
+        i.fa-trash {
+            transition: all 0.1s ease-in-out;
+            font-size: 20px;
+
+            &:hover {
+                color: $Primaire-color;
+            }
+        }
+    }
+
+
+    .viewPost {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 90%;
+        text-align: start;
+        font-size: 18px;
+
+        img {
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+            border: 2px solid $Tertiaire-color ;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: 8px;
+        }
+        .iconImgBtn {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            label i {
+                font-size: 25px;
+                color: $Primaire-color;
+                margin-top: 10px;
+                cursor: pointer;                
+            }        
+        }        
+
+        input.file-input {
+            visibility: hidden;
+            width: 0;
+            height: 0          
+        }
+
+        .btn-updateItem {
+            background-color: $Tertiaire-color;
+            color: $Secondaire-color;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+    
+            &:hover {
+                background-color: $Tertiaire-color;
+                color: $Secondaire-color;
+                border: none;
+                border-radius: 5px;
+                padding: 10px;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+        }
+        button.btn-updateItem.Upload {
+            width: 90%;
+            align-items: center;
+            justify-content: center;            
+            text-align: center;
+        }
+    }
+
+    .like_comment {
+
+        .like,
+        .comment {
+            display: flex;
+        }
+
+        span {
+            margin-right: 7px;
+            margin-top: 10px;
+        }
+    }
+
+    i {
+        font-size: 25px;
+        color: $Primaire-color;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .fa-regular.fa-heart:hover {
+        color: $Primaire-color;
+    }
+
+    .fa-solid.fa-heart {
+        color: $Primaire-color;
+    }
+
+    .textarea {
+        width: 100%;
+        height: 70px;
+        border-radius: 5px;
+        border: 1px solid $Tertiaire-color;
+        padding: 10px;
+        margin-top: 10px;
+        color: $Tertiaire-color;
+        background-color: $Secondaire-color;
+
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .btn-updateItem {
+        background-color: rgba(156, 163, 175, 12);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(105, 111, 122);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .appear {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        background-color: #fff;
+    }
+}

@@ -1,0 +1,237 @@
+.main-profil {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 768px) {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+    h1 {
+        span {
+            font-weight: bold;
+            color: $Secondaire-color ;
+        }
+    }
+
+    .displayBottom {
+        display: flex;
+        // flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 28px;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            margin-top: 0;
+        }
+    }
+
+
+    .my-profil {
+        background-color: $Primaire-color ;
+        border-radius: 15px;
+        margin-top: 20px;
+        padding: 17px;
+        width: 700px;
+        margin-bottom: 30px;
+        @media (max-width: 768px) {
+            width: 95%;
+        }
+
+    }
+
+    .conatainer_name_profilImg {
+        padding: 11px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 60px;
+        @media (max-width: 768px) {
+            margin-right: 0;
+        }
+
+        form.upload_img {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+
+        }
+
+        .injected_img_path {
+            margin-top: 19px;
+            width: 106%;
+            height: 37px;
+            border: 1px solid rgba(166, 166, 166, 0.955);
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 14px;
+            color: $Tertiaire-color ;
+            background-color: $Secondaire-color;
+            text-align: center;
+            &:focus {
+                outline: none;
+            }
+
+        }
+
+        i {
+            font-size: 33px;
+            color: $Secondaire-color;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        input.file-input {
+            visibility: hidden;
+            width: 0;
+            height: 0
+        }
+
+        .Upload {
+            padding: 10px 20px;
+            background-color: $Secondaire-color;
+            color: $Tertiaire-color;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            border: none;
+
+            &:hover {
+                background-color: $Tertiaire-color;
+                color: $Secondaire-color
+            }
+
+        }
+
+        .icon_UpdateImg {
+            padding-bottom: 11px;
+        }
+    }
+
+    .containerImg {
+        img {
+            border: 1px solid $Secondaire-color;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            padding: 3px;
+        }
+
+    }
+
+    .forContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    h3.time_of_inscription {
+        color: $Tertiaire-color;
+
+        span {
+            font-weight: bold;
+            color: #000;
+        }
+    }
+
+    .bioInput-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 35px;
+
+
+        .bio {
+            width: 90%;
+            height: 120px;
+            border: 1px solid $Tertiaire-color;
+            border-radius: 5px;
+            margin-top: 10px;
+            padding: 5px;
+            font-size: 15px;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::-webkit-scrollbar {
+                width: 12px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: $Secondaire-color;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $Primaire-color ;
+                border-radius: 20px;
+                border: 1px solid #f1f1f1;
+            }
+        }
+    }
+
+
+
+
+
+    button {
+        background-color: $Secondaire-color;
+        width: 150px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        i {
+            font-size: 20px;
+            color: $Tertiaire-color;
+            cursor: pointer;
+        }
+
+        &:hover {
+            
+            background-color: $Tertiaire-color;
+
+            i {
+                color: $Secondaire-color; 
+            }
+        }
+       
+        
+    
+
+    
+    }
+
+
+
+    .iconImgAndPost {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .desappear {
+    display: none;
+    }
+
+    .appear {
+        display: inline-block;
+    }
+}

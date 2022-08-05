@@ -1,0 +1,76 @@
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: $Tertiaire-color;
+    // box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, .08);
+    height: 90px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        height: auto;
+        padding:  0;
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+    }
+
+    img.imgLogo {
+        width: 260px;
+        height: 260px;
+        margin-right: 0.5rem;
+        @media (max-width: 768px) {
+            width: 200px;
+            height: 200px;
+            margin-top: -3rem;
+        }
+    }
+
+    .iconsNav {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+
+        @media (max-width: 768px) {
+            margin-top: -50px;
+            margin-bottom: 20px;
+        }
+
+        i {
+            color: $Tertiaire-color;
+            background-color: $Secondaire-color;
+            cursor: pointer;
+            font-size: 15px;
+            padding: 10px;
+            border-radius: 50%;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: $Secondaire-color;
+                color: $Primaire-color;
+                transform: scale(1.8);
+            }
+        }
+
+        .nouvelle__publication {
+            background-color: $Secondaire-color;
+            padding: 15px 10px;
+            border: none;
+            color: $Tertiaire-color;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: $Primaire-color;
+                color: $Secondaire-color;
+            }
+
+        }
+    }
+}
