@@ -1,15 +1,7 @@
 const User = require("../models/user.model");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-require("dotenv").config({ path: "./config/.env" });
 const fs = require("fs");
-
-/* const admin = new User ({
-    name: "admin",
-    email: "admin@admin.com",
-    password: process.env.ADMIN_PASSWORD,
-    role: "admin"
-}); */
 
 // Authentication middleware
 

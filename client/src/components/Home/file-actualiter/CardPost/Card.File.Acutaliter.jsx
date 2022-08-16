@@ -5,7 +5,7 @@ import { updatePost } from "../../../../actions/post.action";
 import { shortDateParser, isEmpty } from "../../../utils/Utils";
 import DeleteCard from "./Delete.Card";
 import LikeButton from "./Like.Button";
-import CommentCard from "../comments/Comment";
+/* import CommentCard from "../comments/Comment"; */
 import { roleToken } from "../../../../token/Token";
 
 const CardAcutaliter = ({ post, commentArray, setPostCommentOn}) => {
@@ -19,12 +19,12 @@ const CardAcutaliter = ({ post, commentArray, setPostCommentOn}) => {
   const [postPicture, setPostPicture] = React.useState(post.imageUrl);
   const [file, setFile] = React.useState(null);   
 
-  const idFlou = "flou" + post._id;
-  const divComment = document.getElementById("post"+post._id);
+  /* const idFlou = "flou" + post._id; */
+  /* const divComment = document.getElementById("post"+post._id); */
   
-  const [lastPostCommented, setLastPostCommented] = React.useState("");
+  /* const [lastPostCommented, setLastPostCommented] = React.useState(""); */
   
-  function UseFlou(postId){
+  /* function UseFlou(postId){
     const flouBack = document.getElementById("flou");
     const allreadyOn = flouBack.classList.contains("flou-appear");
 
@@ -37,7 +37,7 @@ const CardAcutaliter = ({ post, commentArray, setPostCommentOn}) => {
       setPostCommentOn([...commentArray, postId ]);
       (!allreadyOn)&&flouBack.classList.toggle("flou-appear"); 
     }     
-  } 
+  }  */
   
   const handlePicture = (e) => {
     setFile(e.target.files[0]);
@@ -51,30 +51,30 @@ const CardAcutaliter = ({ post, commentArray, setPostCommentOn}) => {
     setIsUpdated(false);          
   };
   //Récupération de la fonction de mise à jour
-  const [, fctMiseAJour] = React.useState();
+  /* const [, fctMiseAJour] = React.useState(); */
   //Encapsulation de l'appel
-  const miseAJour = React.useCallback(() => fctMiseAJour({}), []);
+  /* const miseAJour = React.useCallback(() => fctMiseAJour({}), []); */
 
-  const handleClick = () => {    
+  /* const handleClick = () => {    
     divComment.classList.toggle("see");    
     UseFlou(post._id);    
     //Appel pour forcer le rendu du composant
     miseAJour();
     console.log(commentArray);
-  };
+  }; */
 
   useEffect(() => {
     !isEmpty(usersData[0]) && setLoadPost(false); /* Test d'un user afin de lire les posts */
   }, [usersData]);
 
-  useEffect(() => { /* Pour remettre les commentaires ouvert aprés un render juste aprés un ajout d'un commentaire ou une supression */
+  /* useEffect(() => { Pour remettre les commentaires ouvert aprés un render juste aprés un ajout d'un commentaire ou une supression
     commentArray.forEach(el => {
       let doc = document.getElementById("post"+el);
       if (!doc.classList.value.includes("see")) doc.classList.toggle("see");
     })   
-  },[]);
+  },[]); */
   
-  useEffect(() => miseAJour(),[]);
+  /* useEffect(() => miseAJour(),[]); */
   
   return (
     <div className="postContainer" key={post._id} id={"post"+post._id} >
@@ -168,21 +168,21 @@ const CardAcutaliter = ({ post, commentArray, setPostCommentOn}) => {
               <LikeButton post={post} />
             </div>
 
-            <div className="comment" >
+            {/* <div className="comment" >
               <span>{post.comments.length}</span>
               <i
                 className="fa-regular fa-comment"
                 onClick={handleClick}
               ></i>
-            </div>
+            </div> */}
           </div>
           
-          {  (divComment.classList.value.includes("see")) &&(            
+          {/* {  (divComment.classList.value.includes("see")) &&(            
             <>
               <div className="flou" id={idFlou} ></div>              
               <CommentCard post={post} lastPostCommented={lastPostCommented} setLastPostCommented={setLastPostCommented} />
             </>
-          )}
+          )} */}
         </>
       )}
     </div>

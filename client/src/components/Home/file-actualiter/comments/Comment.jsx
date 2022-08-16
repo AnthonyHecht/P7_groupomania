@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addComment} from "../../../../actions/post.action";
 import { timeStampParser } from "../../../utils/Utils";
@@ -99,5 +99,5 @@ const Comment = ( { post, lastPostCommented, setLastPostCommented} ) => {
       </ul>
     </>
   );  
-};
-export default Comment;
+}; */
+/* export default Comment; */
