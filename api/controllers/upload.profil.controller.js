@@ -19,7 +19,7 @@ exports.uploadProfil = (req, res) => {
           )
             .then((user) => res.status(200).json({ message: "success" }))
             .catch((err) =>
-              res.satust(400).json({ error: err, message: "error" })
+              res.status(400).json({ error: err, message: "error" })
             );
         });
       })

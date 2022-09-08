@@ -68,8 +68,6 @@ exports.logout = (req, res, next) => {
   }
 };
 
-//? `\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
 exports.updateUser = (req, res, next) => {
   if (req.file == null) {
     User.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id })

@@ -1,9 +1,4 @@
-import { ADD_POST, DELETE_COMMENT, GET_POSTS } from "../actions/post.action";
-import { LIKE_POST } from "../actions/post.action";
-import { UNLIKE_POST } from "../actions/post.action";
-import { UPDATE_POST } from "../actions/post.action";
-import { DELETE_POST } from "../actions/post.action";
-import { ADD_COMMENT } from "../actions/post.action";
+import { ADD_POST, DELETE_COMMENT, GET_POSTS, LIKE_POST, UNLIKE_POST, UPDATE_POST, DELETE_POST, ADD_COMMENT } from "../actions/post.action";
 
 const initialState = {};
 
