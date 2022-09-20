@@ -9,15 +9,22 @@ const DeleteCard = ({ post }) => {
     dispatch(deletePost(post));
   };
 
+
   return ( 
     <>
       <i
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-2"
+        id="tab-2"
+        tabIndex="0"
         className="fa fa-trash"
         onClick={() => {
           if (window.confirm("Voulez-vous supprimer ce post?")) {
             deleteItem();
           }
         }}
+        
       ></i>
     </>
   );

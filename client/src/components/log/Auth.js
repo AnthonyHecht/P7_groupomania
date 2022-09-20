@@ -21,6 +21,12 @@ const Auth = () => {
     }
   };
 
+   const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+        handleModals(e)
+    }
+  }
+
   return (
     <>
       <div className="container">
@@ -42,14 +48,18 @@ const Auth = () => {
             <div className="containerNavAuth">
               <ul className="auth__nav">
                 <li
+                  tabIndex={0}  
                   onClick={handleModals}
+                  onKeyDown={handleKeyDown}
                   id="signup"
                   className={Signup ? "nav-active" : ""}
                 >
                   Signup
                 </li>
                 <li
+                  tabIndex={0}  
                   onClick={handleModals}
+                  onKeyDown={handleKeyDown}
                   id="login"
                   className={Login ? "nav-active" : ""}
                 >

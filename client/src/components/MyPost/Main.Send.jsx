@@ -11,7 +11,6 @@ const MainSend = () => {
   const dispatch = useDispatch();
 
   
-
   const handlePost = (e) => {
     const data = new FormData();
     data.append("posterId", userData._id);
@@ -32,8 +31,6 @@ const MainSend = () => {
   const changeMessage = (e) => {
     setMessage(e.target.value);    
   };
-
-  
 
   return (
     <main className="mainContainer__new_post">
@@ -59,15 +56,19 @@ const MainSend = () => {
             <div className="containerImg">
               <img
                 src={postPicture}
-                alt="postPicture"
+                alt="image_post"
                 className="postPicture"
               />
             </div>
           )}
 
-          <div className="iconImgAndPost">
+          <div role="tablist" className="iconImgAndPost">
             <label htmlFor="file-input">
-              <i className="fa-solid fa-image"></i>
+              <i 
+              role="tab"
+              tabIndex="0"
+              className="fa-solid fa-image"
+              ></i>
             </label>
             <input
               type="file"
@@ -81,7 +82,10 @@ const MainSend = () => {
             {((message && file) ) && (
               <NavLink to="/home">
                 <button onClick={handlePost}>
-                  <i className="fa-solid fa-paper-plane"></i>
+                  <i 
+                  role="tab"
+                  tabIndex="0"
+                  className="fa-solid fa-paper-plane"></i>
                 </button>                
               </NavLink>
             )}

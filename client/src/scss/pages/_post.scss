@@ -43,7 +43,12 @@
 
     .update-delete {
         display: flex;
-
+        i {
+            &:focus{
+                    outline: 3px white solid;
+                    outline-offset: 4px;
+            }
+        }
         i.fa.fa-edit {
             margin-right: 30px;
             color: $Tertiaire-color;
@@ -70,9 +75,10 @@
         color: $Tertiaire-color;
         font-size: 17px;
 
-        &:focus {
-            outline: none;
-        }
+        &:focus{
+                    outline: 3px white solid;
+                    outline-offset: 4px;
+            }
     }
 
     
@@ -192,7 +198,11 @@
                 font-size: 25px;
                 color: $Primaire-color;
                 margin-top: 10px;
-                cursor: pointer;                
+                cursor: pointer;     
+                &:focus{
+                    outline: 3px white solid;
+                    outline-offset: 4px;
+            }           
             }        
         }        
 
@@ -226,6 +236,10 @@
             align-items: center;
             justify-content: center;            
             text-align: center;
+            &:focus{
+                    outline: 3px white solid;
+                    outline-offset: 4px;
+            }
         }
     }
 
@@ -248,6 +262,10 @@
         margin-top: 10px;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
+        &:focus{
+                    outline: 3px white solid;
+                    outline-offset: 4px;
+            }        
     }
 
     .fa-regular.fa-heart:hover {

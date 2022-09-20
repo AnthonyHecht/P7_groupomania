@@ -75,9 +75,15 @@ const CardAcutaliter = ({ post, commentArray, setPostCommentOn}) => {
   },[]); */
   
   /* useEffect(() => miseAJour(),[]); */
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+        setIsUpdated(!isUpdated)
+    }
+  }
   
   return (
-    <div className="postContainer" key={post._id} id={"post"+post._id} >
+    <div role="tablist" className="postContainer" key={post._id} id={"post"+post._id} >
       {loadPost ? (
         <i className="fa fa-spinner fa-spin"></i>
       ) : (
@@ -116,8 +122,14 @@ const CardAcutaliter = ({ post, commentArray, setPostCommentOn}) => {
             {roleToken === "admin" || post.posterId === userData._id ? (
               <div className="update-delete">
                 <i
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="panel-1"
+                  id="tab-1"
+                  tabIndex="0"
                   className="fa fa-edit"
-                  onClick={() => setIsUpdated(!isUpdated)}
+                  onClick={() => setIsUpdated(!isUpdated)} 
+                  onKeyDown={handleKeyDown}              
                 ></i>
                 <DeleteCard post={post._id} />
               </div>
@@ -141,10 +153,10 @@ const CardAcutaliter = ({ post, commentArray, setPostCommentOn}) => {
                   defaultValue={post.message}
                   onChange={(e) => setTextUpdatedState(e.target.value)}
                 />
-                {postPicture && <img src={postPicture} alt="post_image" />}
+                {postPicture && <img src={postPicture} alt="image_du_post" />}
                 <div className="iconImgBtn">
                   <label htmlFor="file-input">
-                    <i className="fa-solid fa-image"></i>
+                    <i tabIndex={0} className="fa-solid fa-image"></i>
                   </label>
                   <input
                     type="file"

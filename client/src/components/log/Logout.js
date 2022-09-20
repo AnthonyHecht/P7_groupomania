@@ -7,9 +7,16 @@ const Logout = () => {
 
     window.location.reload();
   };
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+        logout()
+    }
+  }
   return (
     <>
-      <i className="fa-solid fa-arrow-right-from-bracket" onClick={logout}></i>
+      <i 
+      tabIndex="0"
+      className="fa-solid fa-arrow-right-from-bracket" onClick={logout} onKeyDown={handleKeyDown}></i>
     </>
   );
 };

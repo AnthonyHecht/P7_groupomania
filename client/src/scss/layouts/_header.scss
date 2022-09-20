@@ -27,6 +27,10 @@ header {
             height: 200px;
             margin-top: -3rem;
         }
+        &:focus{
+                    outline: 3px white solid;
+                    outline-offset: 4px;
+            }
     }
 
     .iconsNav {
@@ -53,6 +57,10 @@ header {
                 color: $Primaire-color;
                 transform: scale(1.8);
             }
+            &:focus{
+                    outline: 3px white solid;
+                    outline-offset: 4px;
+            }
         }
 
         .nouvelle__publication {
@@ -70,7 +78,7 @@ header {
                 background-color: $Primaire-color;
                 color: $Secondaire-color;
             }
-
+            
         }
     }
 }

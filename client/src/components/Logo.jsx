@@ -7,7 +7,7 @@ const Logo = ({white, black}) => {
   return (
     <div className="header__img">
       <NavLink to='/home'>
-      <img src={logo} alt="img_Logo" className="imgLogo" />
+      <img src={logo} alt="Logo Groupomania" className="imgLogo" />
       </NavLink>
     </div>
   );

@@ -15,7 +15,7 @@ const Article = () => {
         <h2 className="name" key={userData.name}>{userData.name}</h2>
 
         <div className="container_img_profil">
-          <img src={userData.avatar} alt="" key={userData.avatar}/>
+          <img src={userData.avatar} alt="avatar_profil" key={userData.avatar}/>
         </div>
 
         <div className="renseignement">

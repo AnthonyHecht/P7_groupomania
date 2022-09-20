@@ -25,18 +25,42 @@ const LikeButton = ({ post }) => {
     setLiked(false);
   }, [userId, liked, post.usersLiked]);
 
+  const handleLike = (e) => {
+    if (e.key === 'Enter') {
+        like()
+    }
+  }
+
+  const handleUnlike = (e) => {
+    if (e.key === 'Enter') {
+        unlike()
+    }
+  }
+
   return (
     <>
       <span>{post.usersLiked.length}</span>
       {liked === false && (
         <>
-          <i className="fa-regular fa-heart" onClick={like}></i>
+          <i 
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-3"
+          id="tab-3"
+          tabIndex="0"
+          className="fa-regular fa-heart" onClick={like} onKeyDown={handleLike}></i>
         </>
       )}
 
       {liked === true && (
         <>
-          <i className="fa-solid fa-heart" onClick={unlike}></i>
+          <i
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-3"
+          id="tab-3"
+          tabIndex="0"
+           className="fa-solid fa-heart" onClick={unlike} onKeyDown={handleUnlike}></i>
         </>
       )}
     </>
