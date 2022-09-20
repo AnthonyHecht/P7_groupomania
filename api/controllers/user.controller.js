@@ -19,7 +19,7 @@ exports.signup = (req, res) => {
         .then(() => res.status(201).json({ message: "Utilisateur créé !" }))
         .catch((err) => {
           if (err.message.includes("name"))
-            res.status(409).json({ error: err, name: "Nom déjà pris !" });
+            res.status(409).json({ error: err, name: "Caractères interdits" });
 
           if (err.message.includes("email"))
             res.status(409).json({ error: err, email: "Email déjà utilisé !" });

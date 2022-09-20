@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 
+import Swal from "sweetalert2"
+
 const SignupModal = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -9,8 +11,8 @@ const SignupModal = () => {
   const handleSignup = (e) => {
     e.preventDefault();
 
-    const nameError = document.querySelector(".name.error");
-    const emailError = document.querySelector(".email.error");
+    /* const nameError = document.querySelector(".name.error");
+    const emailError = document.querySelector(".email.error"); */
 
     axios({
       method: "POST",
@@ -44,13 +46,16 @@ const SignupModal = () => {
           });
       })
       .catch((err) => {
-        if (err.response.data.name) {
+        console.log(err.response.data.error)
+        
+        /* if (err.response.data.name) {
           nameError.innerHTML = err.response.data.name;
           emailError.innerHTML = "";
         } else if (err.response.data.email) {
           nameError.innerHTML = "";
           emailError.innerHTML = err.response.data.email;
-        }
+        } */
+        Swal.fire(`le mot de passe doit contenir un minimum de 8 caractères, une majuscule et une minuscule ainsi que 2 chiffres`)
       });
   };
 

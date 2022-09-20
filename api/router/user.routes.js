@@ -5,9 +5,10 @@ const userCtrl = require("../controllers/user.controller");
 const auth = require("../middleware/auth");
 const uploadAvatarCtrl = require("../controllers/upload.profil.controller");
 const multer = require("../middleware/multer");
+const password = require("../middleware/password")
 
 // Sign up and login routes
-router.post("/signup", userCtrl.signup);
+router.post("/signup", password, userCtrl.signup);
 router.post("/login", userCtrl.login);
 router.get("/logout", userCtrl.logout);
 
