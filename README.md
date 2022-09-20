@@ -74,7 +74,3 @@ Une fois la base de données créé, vous devriez avoir :
 - Un mot de passe de connexion à la base de données
 - une adresse pour accéder à la base afin de se connecter qui peux se trouver dans Deployment -> Cluster -> Connect -> connect your application : 
 (de type mongodb+srv://<username>:<password>@cluster0.afknvvw.mongodb.net/<nom_de_la_database>?retryWrites=true&w=majority) où <nom_de_la_database> est le nom si une de crée manuellement sinon par defaut c'est vierge.
-- Créez un fichier .env dans le dossier config de l'API et rentrez y vos log sous cette forme 
-DB_ID="compte"
-DB_MDP="motDePasse"
-DB_ADDRESS="adresseMongoDB"
