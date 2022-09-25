@@ -15,9 +15,9 @@ Ouvrez un terminal:
 <br>
 Depuis le dossier précédement créé, clonez le repository de l'application groupomania avec la commande :
 <br>
-<pre><code>git clone https://github.com/Nathom78/P7_Creez_un_reseau_social_d-entreprise_LECOMTE_Thomas.git</code></pre>
+<pre><code>git clone https://github.com/AnthonyHecht/P7_groupomania.git</code></pre>
 
-ou depuis  [ce repository](https://github.com/Nathom78/P7_Creez_un_reseau_social_d-entreprise_LECOMTE_Thomas.git)
+ou depuis  [ce repository](https://github.com/AnthonyHecht/P7_groupomania.git)
 <br>
 ## 2. Installation de l'API ####
 <br>
